@@ -103,7 +103,6 @@ body {
 .one {
   background-color: var(--clr-violet);
   background-image: url(images/bg-pattern-quotation.svg);
-  background-repeat: no-repeat;
   background-position: top right 17%
   color: var(--clr-white);
   grid-area: one;
