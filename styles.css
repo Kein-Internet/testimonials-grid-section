@@ -9,6 +9,15 @@
   --clr-gray: hsl(0, 0%, 81%);
   --clr-blue-50: hsl(210, 46%, 95%);
 
+  --shadow-color: 0deg 0% 46%;
+  --shadow-elevation-low: 1px 1px 2.1px hsl(var(--shadow-color) / 0),
+    3px 3px 6.4px hsl(var(--shadow-color) / 0.25);
+  --shadow-elevation-medium: 1px 1px 2.1px hsl(var(--shadow-color) / 0),
+    15px 15px 31.8px hsl(var(--shadow-color) / 0.35);
+  --shadow-elevation-high: 1px 1px 2.1px hsl(var(--shadow-color) / 0),
+    16.3px 16.3px 34.6px hsl(var(--shadow-color) / 0.29),
+    50px 50px 106.1px hsl(var(--shadow-color) / 0.58);
+
   --ff-barlow: "Barlow Semi Condensed";
 
   --fs-normal: calc(13rem / 16);
@@ -61,8 +70,9 @@ body {
 
 .testimonial__card {
   background-color: rgb(36, 230, 26);
-  padding: calc(27rem / 16) calc(32rem / 16);
+  padding: calc(27rem / 16) calc(32rem / 16) calc(15rem / 16);
   border-radius: 10px;
+  box-shadow: var(--shadow-elevation-medium);
 }
 
 .testimonial__avatar {
@@ -142,6 +152,14 @@ body {
 }
 
 @media (min-width: 37.5em) {
+  .one .testimonial__summary {
+    margin-bottom: 1rem;
+  }
+
+  .three .testimonial__summary {
+    margin-bottom: 1rem;
+  }
+
   .grid-group {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
